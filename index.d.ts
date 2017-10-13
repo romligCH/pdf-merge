@@ -17,8 +17,10 @@ declare namespace pdfMerge{
 	}
 
 	interface PDFMergeStatic {
-		(files: string[], options: StreamOptions): Promise<ReadableStream>;
-		(files: string[], options?: BufferOptions): Promise<Buffer>;
+		/** Merge multiple PDF Files into a single PDF document */
+		(files: string[], options: StreamOptions): Promise<ReadableStream>
+		/** Merge multiple PDF Files into a single PDF document */
+		(files: string[], options?: BufferOptions): Promise<Buffer>
 	}
 }
 
