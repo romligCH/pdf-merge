@@ -1,7 +1,5 @@
 // Type definitions for pdf-merge
 
-import 'node';
-
 declare namespace pdfMerge{
 	interface Options{
 		/** Should only be provided if pdftk is not in your PATH Optional! */
@@ -19,8 +17,8 @@ declare namespace pdfMerge{
 	}
 
 	interface PDFMergeStatic {
-		(files: string[], options: StreamOptions): ReadableStream;
-		(files: string[], options: BufferOptions): Buffer;
+		(files: string[], options: StreamOptions): Promise<ReadableStream>;
+		(files: string[], options?: BufferOptions): Promise<Buffer>;
 	}
 }
 
