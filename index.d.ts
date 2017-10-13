@@ -17,9 +17,17 @@ declare namespace pdfMerge{
 	}
 
 	interface PDFMergeStatic {
-		/** Merge multiple PDF Files into a single PDF document */
+		/**
+		 * Merge multiple PDF Files into a single PDF document
+		 * @param files is expected to be an array of files. Must be full path for each respective file.
+		 * @param options library path and output type
+		 */
 		(files: string[], options: StreamOptions): Promise<ReadableStream>
-		/** Merge multiple PDF Files into a single PDF document */
+
+		/** Merge multiple PDF Files into a single PDF document
+		 * @param files is expected to be an array of files. Must be full path for each respective file.
+		 * @param options library path and output type
+		 */
 		(files: string[], options?: BufferOptions): Promise<Buffer>
 	}
 }
